@@ -29,8 +29,8 @@ public class csgoBaseGame
     {
         
         // how to make randome int, (int)(Math.random()*OneBelowMaxInt i.e 10 would result highest number of 9) + Starting int
-        //(int)(Math.random()*11)+1 would return an int between 1 and 10
-        // if ((int)(Math.random()*11)+1 == 2)// one in 10 chance  
+        //(int)(Math.random()*11)+1 would return an int between 1 and 11
+        // if ((int)(Math.random()*11)+1 == 2)// one in 11 chance  
            { 
             do something
             }
