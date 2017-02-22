@@ -5,7 +5,7 @@ import java.util.Scanner; // this imports scanner class, which can use .nextInt 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class csgoBaseGame
+public class roulette
 {
     public static void main(String[] args)
     {
