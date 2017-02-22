@@ -1,2 +1,2 @@
 # csgoWebsite
-made by memers
+One step at a time
