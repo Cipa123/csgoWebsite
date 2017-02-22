@@ -6,6 +6,12 @@
   </head>
 
 
+<body bgcolor="blue">
+<p>
+Easy skins <br>Easy profit
+</p>
+
+
 
 
 print ("I AM EDITING THIS THING") good
@@ -17,6 +23,8 @@ print ("I AM EDITING THIS THING") good
 
 
 
+
+</body>
 
 
 
