@@ -21,7 +21,7 @@ public class Sample{
 	{
 	  String a = "yes";
            Scanner sc = new Scanner(System.in);
-		  while(a=="yes")
+		  while(a.equals("yes"))
 			  
 		  {
 
