@@ -1,5 +1,7 @@
 
 
+
+
 import java.util.Scanner;
 import java.util.*;
 
@@ -63,13 +65,13 @@ public class Sample{
 					 Balance = Balance + BetAmount;
 					 System.out.println("JACKPOT! YOU WIN!");
 				 }
-				 else if ((LuckyNumber < 8)&& (Red == true))
+				 else if ((LuckyNumber < 8)&& (LuckyNumber != 0) && (Red == true))
 				 {
 					 BetAmount = BetAmount*2;
 					 Balance = Balance + BetAmount;
 					 System.out.println("JACKPOT! YOU WIN!");
 				 } 
-				 else if ((LuckyNumber > 8)&& (Black == true))
+				 else if ((LuckyNumber > 8)&& (LuckyNumber != 0)&& (Black == true))
 				 {
 					 BetAmount = BetAmount*2;
 					 Balance = Balance + BetAmount;
