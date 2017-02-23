@@ -35,7 +35,7 @@ public class Sample{
 	
 				int BetAmount = sc.nextInt();
 				
-				if ((BetAmount > Balance)||(BetAmount < 0));
+				if ((BetAmount > Balance)||(BetAmount < 0))
 				{
 					System.out.println("Illigal Bet Exiting Game...");
 					a = "no";
