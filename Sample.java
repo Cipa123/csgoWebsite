@@ -8,10 +8,6 @@ public class Sample{
 
 	public static void main(String[] args){
 		
-		boolean Green = false;
-		boolean Red = false;
-		boolean Black = false;
-		
 		
 		int balance = 100;
 		
