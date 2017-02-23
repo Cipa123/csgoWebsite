@@ -15,7 +15,7 @@ public class Sample{
 		
 
 		
-	System.out.println("Hello, and Welcome to Bet your life away.com");
+	System.out.println("Hello, and Welcome to Roulette");
 	
 	gamble(balance);
 	} 
