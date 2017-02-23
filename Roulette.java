@@ -2,7 +2,7 @@
 import java.util.Scanner;
 //import java.util.*; // not needed
 
-public class Sample{
+public class Roulette{
 	
 	public static void main(String[] args)
 	{
