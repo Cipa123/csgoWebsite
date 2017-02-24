@@ -36,7 +36,7 @@ public class JackpotMain
                
             }
    
-   
+            System.out.println("done");
    
    
    
