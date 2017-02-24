@@ -27,7 +27,14 @@ public class JackpotMain
                
                
             }
-      
+      double [] playerOdds = new double [numPLayers];
+            for(int i =0; i<playerOdds.length; i++)
+            {
+               playerOdds[i] = sum/bets[i];
+               
+               
+               
+            }
    
    
    
