@@ -27,17 +27,19 @@ public class JackpotMain
                
                
             }
+            System.out.println(sum);
       double [] playerOdds = new double [numPLayers];
             for(int i =0; i<playerOdds.length; i++)
             {
-               playerOdds[i] = sum/bets[i];
-               
-               
-               
+               playerOdds[i] = sum/bets[i]; 
             }
    
             System.out.println("done");
-   
+            for(int i =o; i<playerOdds.length; i++)
+            {
+               System.out.println(playerOdds[i]);
+                
+            }
    
    
    
