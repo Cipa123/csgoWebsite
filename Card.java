@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class Cards
+public class Card
 {
   private string cardName;
   private boolean isDrawn;
   private int value;
-  public Cards(string a, int c)
+  public Card(string a, int c)
   {
     cardName = a;
     isDrawn = false;
