@@ -41,8 +41,8 @@ public class JackpotMain
                 
             }
    
-   
-   
+            double luckyNumber =Math.random();
+            
    
    
    }
