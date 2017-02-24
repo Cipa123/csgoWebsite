@@ -46,7 +46,7 @@ public class JackpotMain
                     for(int i =0; i<bets.length; i++)
                     {
                   
-                        if(luckynumber > prevOdd && luckynumber <= (prevOdd + playerOdds[i]))
+                        if(luckynumber > prevOdd && luckyNumber <= (prevOdd + playerOdds[i]))
                         {
                                 System.out.println("player " + i + " won " + sum);
                             i = bets.length;
