@@ -52,7 +52,7 @@ public class JackpotMain
                             i = bets.length;
 
                          }
-                        prevOdd += playerOdds[i];
+                        prevOdd = prevOdd+playerOdds[i];
 
 
 
