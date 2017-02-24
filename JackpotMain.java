@@ -9,16 +9,16 @@ public class JackpotMain
       System.out.println("Enter number of players");
       numPlayers = sc.nextInt();
       
-      int [] bets = new int [numPlayers];
+      double [] bets = new double [numPlayers];
             for(int i = 0; i < bets.length; i++)
              {
                 System.out.println("Enter amount for player " + i);
-                bets[i] = sc.nextInt();
+                bets[i] = sc.nextDouble();
        
         
             }
             
-            int sum = 0;
+            double sum = 0;
          
             for(int i =0; i<bets.length; i++)
             {
@@ -31,7 +31,7 @@ public class JackpotMain
       double [] playerOdds = new double [numPlayers];
             for(int i =0; i<playerOdds.length; i++)
             {
-               playerOdds[i] = sum/bets[i]; 
+               playerOdds[i] = bets[i]/sum; 
             }
    
             System.out.println("done");
