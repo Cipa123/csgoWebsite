@@ -45,11 +45,7 @@ public class JackpotMain
              double prevOdd = 0;
                     for(int i =0; i<bets.length; i++)
                     {
-                        if(luckyNumber <= playerOdds[i]&& i ==0)
-                        {
-                            System.out.println("player " + i + " won " + sum);
-                            i = bets.length;
-                          }
+                  
                         if(luckynumber > prevOdd && luckynumber <= (prevOdd + playerOdds[i]))
                         {
                                 System.out.println("player " + i + " won " + sum);
