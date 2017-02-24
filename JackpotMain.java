@@ -17,6 +17,16 @@ public class JackpotMain
        
         
             }
+            
+            int sum = 0;
+         
+            for(int i =0; i<bets.length; i++)
+            {
+               sum += bets[i];
+               
+               
+               
+            }
       
    
    
