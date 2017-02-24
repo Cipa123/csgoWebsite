@@ -12,7 +12,7 @@ public class JackpotMain
       double [] bets = new double [numPlayers];
             for(int i = 0; i < bets.length; i++)
              {
-                System.out.println("Enter amount for player " + i);
+                System.out.println("Enter amount for player " + (1+i));
                 bets[i] = sc.nextDouble();
        
         
@@ -48,7 +48,7 @@ public class JackpotMain
                   
                         if(luckynumber > prevOdd && luckyNumber <= (prevOdd + playerOdds[i]))
                         {
-                                System.out.println("player " + i + " won " + sum);
+                                System.out.println("player " + (1+i) + " won " + sum);
                             i = bets.length;
 
                          }
