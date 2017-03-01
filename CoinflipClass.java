@@ -25,7 +25,7 @@ public class CoinflipClass {
 	public static void gamble(int Balance){
 	
 		
-		Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
 	boolean Continue = true;
 	
 		while(Continue == true)
@@ -37,6 +37,7 @@ public class CoinflipClass {
 			boolean tsidewin = false;
 			
 			System.out.println("Your balance is currently:" + Balance + ("$"));
+			System.out.println(" ");
 			System.out.println("How much do you want to bet?");
 			int BetAmount = sc.nextInt();
 			
@@ -44,15 +45,18 @@ public class CoinflipClass {
 			
 			System.out.println("New Balance = " + Balance + ("$"));
 			
-			if ((BetAmount > Balance)||(BetAmount < 0))
+			if ((BetAmount > Balance + BetAmount)||(BetAmount < 0))
 			{
 				System.out.println("Illigal Bet Exiting Game...");
 				Continue = false;
+				break;
 			}
 			
 			
 			
 			System.out.println("Choose a side, CT or T?");
+			
+			sc.nextLine();
 			
 			String Side = sc.nextLine();
 			
