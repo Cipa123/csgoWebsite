@@ -60,6 +60,7 @@ public class CoinflipClass {
 			
 			String Side = sc.nextLine();
 			// use equalsIgnoreCase
+			// again one boolean is needed no point in all these if statements
 			if (Side.equals("T"))
 			{
 				tside = true;
@@ -103,7 +104,7 @@ public class CoinflipClass {
 			
 			
 			
-			if ((tside == true)& (tsidewin == true))
+			if ((tside == true)& (tsidewin == true)) // i dont know how this compiles correct form is && not &
 			{
 				Balance = BetAmount*2 + Balance;
 				System.out.println(" ");
@@ -131,7 +132,7 @@ public class CoinflipClass {
 			{
 				 Continue = true;
 			}
-			else if (PlayAgain.equals ("no"))// if you tyoe somthing random it will still continue
+			else if (PlayAgain.equals ("no"))// if you type somthing random it will still continue
 			{
 				Continue = false;
 			}
