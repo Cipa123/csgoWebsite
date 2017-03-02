@@ -30,7 +30,7 @@ public class CoinflipClass {
 	
 		while(Continue == true)
 		{
-			
+			// you truly need one boolean isWin
 			boolean ctside = false;
 			boolean tside = false;
 			boolean ctsidewin = false;
@@ -45,11 +45,11 @@ public class CoinflipClass {
 			
 			System.out.println("New Balance = " + Balance + ("$"));
 			
-			if ((BetAmount > Balance + BetAmount)||(BetAmount < 0))
+			if ((BetAmount > Balance + BetAmount)||(BetAmount < 0)) // you can bet zero, thats pretty dumb
 			{
 				System.out.println("Illigal Bet Exiting Game...");
 				Continue = false;
-				break;
+				break; // better to set continue to false instead of break
 			}
 			
 			
@@ -59,7 +59,7 @@ public class CoinflipClass {
 			sc.nextLine();
 			
 			String Side = sc.nextLine();
-			
+			// use equalsIgnoreCase
 			if (Side.equals("T"))
 			{
 				tside = true;
@@ -85,7 +85,7 @@ public class CoinflipClass {
 			System.out.println("filpping coin..");
 			
 			int LuckyNumber =(int)(Math.random()*10);
-			
+			// you only need two numbers not 10
 			
 			
 			
@@ -93,7 +93,7 @@ public class CoinflipClass {
 			{
 				tsidewin = true;
 			}
-			else if (LuckyNumber >= 4)
+			else if (LuckyNumber >= 4) // what the hell is this, 4 wins for both sides 
 			{
 				ctsidewin = true;
 			}
@@ -131,7 +131,7 @@ public class CoinflipClass {
 			{
 				 Continue = true;
 			}
-			else if (PlayAgain.equals ("no"))
+			else if (PlayAgain.equals ("no"))// if you tyoe somthing random it will still continue
 			{
 				Continue = false;
 			}
