@@ -94,7 +94,7 @@ public class CoinflipClass {
 			{
 				tsidewin = true;
 			}
-			else if (LuckyNumber >= 4) // what the hell is this, 4 wins for both sides 
+			else if (LuckyNumber >= 4) // what the heck is this, 4 wins for both sides 
 			{
 				ctsidewin = true;
 			}
