@@ -45,7 +45,7 @@ public class CoinflipClass {
 			
 			System.out.println("New Balance = " + Balance + ("$"));
 			
-			if ((BetAmount > Balance + BetAmount)||(BetAmount < 0)) // you can bet zero, thats pretty dumb
+			if ((BetAmount > Balance + BetAmount)||(BetAmount < 0)||(BetAmount = 0)) // you can bet zero, thats pretty dumb
 			{
 				System.out.println("Illigal Bet Exiting Game...");
 				Continue = false;
@@ -94,7 +94,7 @@ public class CoinflipClass {
 			{
 				tsidewin = true;
 			}
-			else if (LuckyNumber >= 4) // what the heck is this, 4 wins for both sides 
+			else if (LuckyNumber >= 5) // what the heck is this, 4 wins for both sides 
 			{
 				ctsidewin = true;
 			}
@@ -104,13 +104,13 @@ public class CoinflipClass {
 			
 			
 			
-			if ((tside == true)& (tsidewin == true)) // i dont know how this compiles correct form is && not &
+			if ((tside == true)&& (tsidewin == true)) 
 			{
 				Balance = BetAmount*2 + Balance;
 				System.out.println(" ");
 				System.out.println("YOU WIN!");
 			}
-			else if ((ctside == true)&(ctsidewin == true))
+			else if ((ctside == true)&& (ctsidewin == true))
 			{
 				Balance = BetAmount*2 + Balance;
 				System.out.println(" ");
@@ -135,7 +135,9 @@ public class CoinflipClass {
 			else if (PlayAgain.equals ("no"))// if you type somthing random it will still continue
 			{
 				Continue = false;
+				break;
 			}
+			
 		}
 			
 		
