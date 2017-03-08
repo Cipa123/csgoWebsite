@@ -65,12 +65,3 @@ public class Deck extends Card {
   
 
 }
-   
-  public void draw() // only draw card if isDrawn is false, when a card is drawn set it to true
-  {
-      
-      System.out.println("You have drawn " + deck[(int)(Math.random()*52)]);
-    }
-  
-
-}
