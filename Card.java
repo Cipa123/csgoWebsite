@@ -1,14 +1,24 @@
 import java.util.Scanner;
 
-public class Card
-{
+public class Card {
+	
+	public boolean GetBool(){
+		 return isDrawn();
+	}
+
   private String cardName;
   private boolean isDrawn;
   private int value;
+  
+  
+  
+  
+  
+  
   public Card(String a, int c)
   {
     cardName = a;
-    isDrawn = false;
+    setDrawn(false);
     value = c;
     
   }
@@ -16,7 +26,7 @@ public class Card
   {
       cardName = "noName";
        value = -1;
-       isDrawn = false;
+       setDrawn(false);
     }
   public String getCardName()
   {
@@ -29,10 +39,16 @@ public class Card
     }
   public void makeDrawn()
   {
-      isDrawn = true;
+      setDrawn(true);
     }
    public String toString()
    {
        return("The "+getCardValue()+ " of " + getCardName());
     }
+public boolean isDrawn() {
+	return isDrawn;
+}
+public void setDrawn(boolean isDrawn) {
+	this.isDrawn = isDrawn;
+}
 }
