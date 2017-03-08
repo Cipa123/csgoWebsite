@@ -44,7 +44,7 @@ public class Deck extends Card {
       }
   }
    
-  public void draw() // only draw card if isDrawn is false, when a card is drawn set it to true
+  public void draw() // INFINITE LOOP NICE MEME 
   {
       int a;
       boolean scanning = true;
