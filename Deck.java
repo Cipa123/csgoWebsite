@@ -1,10 +1,16 @@
 import java.util.List;
 
 
-public class Deck extends Card
-{
+public class Deck extends Card {
+	
+	
+	
   private Card [] deck = new Card[52]; 
   public int value = 2;
+  
+
+  
+  
   public Deck()
   {
       for(int i = 0; i<deck.length; i++)
@@ -27,7 +33,7 @@ public class Deck extends Card
            
           if(i > 26 && i < 40)
           {
-              deck[i]= new Card("diamonds",value);
+              deck[i]= new Card("Diamonds",value);
               value++;
            }  
            if(i > 39 && i < 53)
@@ -37,6 +43,28 @@ public class Deck extends Card
            }  
       }
   }
+   
+  public void draw() // only draw card if isDrawn is false, when a card is drawn set it to true
+  {
+      int a;
+      boolean scanning = true;
+      
+    		  while (scanning == true)
+    		  {
+    			  a = (int)(Math.random()*52);
+    			  if (deck[a].isDrawn() == false)
+    			  {
+    				  System.out.println("You have drawn " + deck[a]);
+    				  deck[a].makeDrawn();
+    			  }
+    		  }
+     
+      
+      
+    }
+  
+
+}
    
   public void draw() // only draw card if isDrawn is false, when a card is drawn set it to true
   {
