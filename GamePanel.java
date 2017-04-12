@@ -1,4 +1,6 @@
-import javax.swing.JPanel:
+package Main;
+
+import javax.swing.JPanel;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.event.*;
@@ -35,7 +37,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
   }
   
   public void addNotify() {
-    super.addNotify():
+    super.addNotify();
     if(thread == null) 
     {
       thread = new Thread (this);
@@ -49,14 +51,14 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
   private void init () {
     
     image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
-    g = (Graphics2d) g;
+    g = (Graphics2D) g;
     running = true;
     
       
       
     }
     
-  }
+  
   
   //runs init method and the Game loop
   public void run() {
@@ -75,7 +77,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
   private void draw() {}
   private void drawToScreen() {
     Graphics g2 = getGraphics();
-    g2.drawImage(
+    g2.drawImage(image, 0, 0, null);
+    g2.dispose();
     
   }
   
