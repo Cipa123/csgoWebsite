@@ -10,11 +10,17 @@ This is a Confidential software platform that will be used on patience that show
 Medical Records:
 
 "Case Number: 196 
+
 Patient: EDDIE GLUSKIN 
+
 Consultation Dated: 2013.06.09  
+
 Initial Date of Patient Consult: 2013.02.14
+
 Patient Age: 46 
+
 Gender: Male 
+
 Observing Physician: Dr. Garett Snow
 
 THERAPY STATUS:
