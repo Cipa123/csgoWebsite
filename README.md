@@ -1,4 +1,4 @@
-# Project II Platform Game (TOP SECRET)
+# Project II Platform Creek (TOP SECRET)
 Skeleton stage of development...
 
 **PLEASE ADVISE**
