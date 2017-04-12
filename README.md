@@ -1,4 +1,4 @@
-# Java Platform Game (TOP SECRET)
+# Project II Platform Game (TOP SECRET)
 Skeleton stage of development...
 
 **PLEASE ADVISE**
@@ -7,7 +7,7 @@ There are three levels of security clearance, with the highest level being Top S
 
 This is a Confidential software platform that will be used on patience that show high frequency and amplitudes of the delta and gamma wave ocilations, most associated with the paralized state in sleep. When conciessness is induced, the hypnagogic state, during the onset of sleep is active. Mental phenomena that occur during this "threshold consciousness" phase include lucid thought, hallucinations, and sleep paralysis.
 
-Medical Records:
+Medical Records (MOST RECENT):
 
 "Case Number: 196 
 
@@ -21,7 +21,7 @@ Patient Age: 46
 
 Gender: Male 
 
-Observing Physician: Dr. Garett Snow
+Observing Physicians: Dr. Jhan Teoli and Dr. Mykolas Cipa
 
 THERAPY STATUS:
 
