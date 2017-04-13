@@ -1,4 +1,4 @@
-# Project II Platform Creek (TOP SECRET)
+# Project II Hypnogogic Stage (TOP SECRET)
 Skeleton stage of development...
 
 **PLEASE ADVISE**
