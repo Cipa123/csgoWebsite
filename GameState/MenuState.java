@@ -1,6 +1,8 @@
 package GameState;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
+
 import TileMap.Background;
 
 
@@ -30,12 +32,16 @@ private Font font;
 		
 		try{
 			
-			bg = new Background("/Background/menug.gif", 1);
-			bg.setVector(-0.1, 0);
+			bg = new Background("/Backgrounds/menubg.gif", 1);
+			bg.setVector(-0.01, 0);
 			
-			titleColor = new Color(128, 0, 0);
+			titleColor = new Color(51, 51, 255);
 			titleFont = new Font ("Century Gothic", Font.PLAIN, 28);
 			
+			
+			
+		font = new Font ("Arial", Font.PLAIN, 12);
+		
 			
 		}
 		catch(Exception e) {
@@ -45,9 +51,93 @@ private Font font;
 		
 	}
 	public void init() {}
-	public void update() {}
-	public void draw(Graphics2D g) {}
-	public void keyPressed(int k) {}
+	public void update() {
+		bg.update();
+		
+	}
+	public void draw(Graphics2D g) {
+		//draw bg
+		bg.draw(g);
+		
+		//draw the title
+		g.setColor(titleColor);
+		g.setFont(titleFont);
+		g.drawString("Project Hypnogogia", 40, 70);
+		g.drawString("Stage", 125, 105);
+		
+		
+		//draw menu options
+		
+		g.setFont(font);
+		
+		
+		
+		for(int i = 0; i < options.length; i = i + 1) {
+			
+			if(i == currentChoice) {
+				
+				g.setColor(Color.BLACK);
+				}
+			
+		
+			else {
+				g.setColor(Color.RED);
+
+			}
+			g.drawString(options[i], 145, 140 + i * 15);
+			
+		}
+	}
+	
+	private void select () {
+		if (currentChoice == 0){
+			
+			gsm.setState(GameStateManager.LEVEL1STATE);
+			
+		}
+		if (currentChoice == 1){
+			//help
+		}
+		if (currentChoice == 2){
+			System.exit(0);
+		}
+	}
+	
+
+	public void keyPressed(int k) {
+		
+		
+		for(int i = 0; i < options.length; i = i + 1) {
+	}
+		
+		
+		if (k == KeyEvent.VK_ENTER){
+			
+			select();	
+		}
+		if (k == KeyEvent.VK_DOWN) {
+			System.out.println ("Down");
+			
+			currentChoice = currentChoice + 1;
+			if (currentChoice == options.length) {
+				
+				currentChoice = 0;
+		
+		if (k == KeyEvent.VK_UP) {
+			
+			currentChoice--;
+			if (currentChoice == -1) {
+				currentChoice = options.length - 1;
+			}
+			
+			
+		
+			}
+		}
+	}
+		
+		
+	}
 	public void keyReleased(int k) {}
 }
 
