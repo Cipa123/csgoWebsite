@@ -1,48 +1,56 @@
 
 public class Player {
 
-	private int Lucidity = 1;
-	private int Sanity = 1;
-	private boolean Awake = false;
+	private int lucidity;  // variables start wirth lower case , exampleVariableName; Uppercase is for Classes.
+	private int sanity;
+	private boolean awake;
 
 
-	public Player(int Lucidity, int Panic, boolean Awake) {
-		Lucidity = this.getLucidity();
-		setSanity(this.getSanity());
-		Awake = this.isAwake();
-	
+	public Player(int a,int b, boolean c) {
+	        // are you sober? Lucidity = this.getLucidity();  wtf is this shit. This is worse than spaghetti code
+		lucidity = setLucidity(a);
+		//  or
+		sanity = b
+		awake = c;
 		
 		
+		
 	}
 
 
-	public boolean isAwake() {
-		return Awake;
+	public boolean isAwake() 
+	{
+		return awake;
 	}
 
 
-	public void setAwake(boolean awake) {
-		Awake = awake;
+	public void setAwake(boolean a) 
+	{
+		awake = a;
 	}
 
 
-	public int getLucidity() {
-		return Lucidity;
+	public int getLucidity()
+	{
+		return lucidity;
 	}
 
 
-	public void setLucidity(int lucidity) {
-		Lucidity = lucidity;
+	public void setLucidity(int a) 
+	{
+		lucidity = a;   // again can you user normal names Lucidity = lucidity;   
 	}
 
 
-	public int getSanity() {
-		return Sanity;
+	public int getSanity() 
+	{
+		return sanity;
 	}
 
 
-	public void setSanity(int sanity) {
-		Sanity = sanity;
+	public void setSanity(int a)
+	{
+		sanity = a;
 	}
 	
 }
