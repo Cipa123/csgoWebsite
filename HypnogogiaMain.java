@@ -4,6 +4,10 @@
 // import java.util.Random; useless crap, and random events should be done in seperate class and done with Math.random;
 import java.util.Scanner; // will be made into userInput class.
 
+// I know you are starting out but this is bad design. A main class is the central class that executes other methods. 
+// you put all of printing and events in main. There should be method called firstScreen or menuScreen which is called in main.
+// or better yet a class that contains all the screens or menus. 
+// READ THIS https://www3.ntu.edu.sg/home/ehchua/programming/java/j4a_gui.html
 
 public class HypnogogiaMain
 {
@@ -20,8 +24,8 @@ public class HypnogogiaMain
 		
 		//Dream Things
 		
-		String[] dreamStates = {"Sleep Onset", "Sleep Paralysis", "Rapid Eye Movement", "Deep Sleep"};
-		String[] entities = {"Mom", "Dad", "Brother", "Sister", "Best Friend"};	
+		String[] dreamStates = {"Sleep Onset", "Sleep Paralysis", "Rapid Eye Movement", "Deep Sleep"}; // seperate class
+		String[] entities = {"Mom", "Dad", "Brother", "Sister", "Best Friend"};	// seperate class
 		String dreamStage = dreamStates[0];
 		String dreamStageNarrator = ("You are now in the " + dreamStage + " stage");
 		
@@ -54,7 +58,7 @@ public class HypnogogiaMain
 					answerQuestion = false;
 					while (answerQuestion == false)
 					{
-						System.out.println("Sorry you did not answer that question correctly");
+						System.out.println("Sorry you did not answer that question correctly"); 
 						System.out.println("What do you do?");
 						System.out.println("------------------------------------------------------");
 						System.out.println("1 = Step in front of your mom and the hot pipe");
