@@ -1,7 +1,7 @@
 
 
 
-// import java.util.Random; useless crap, and random events should be done in seperate class.
+// import java.util.Random; useless crap, and random events should be done in seperate class and done with Math.random;
 import java.util.Scanner; // will be made into userInput class.
 
 
