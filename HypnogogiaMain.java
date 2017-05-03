@@ -1,11 +1,12 @@
 
 
 
-import java.util.Random;
-import java.util.Scanner;
+// import java.util.Random; useless crap, and random events should be done in seperate class.
+import java.util.Scanner; // will be made into userInput class.
 
 
-public class HypnogogiaMain {
+public class HypnogogiaMain
+{
 
 	public static void main(String[] args)
 	{
@@ -14,15 +15,15 @@ public class HypnogogiaMain {
 		//Game Operators
 	
 		Scanner sc = new Scanner(System.in);
-		Random rand = new Random();
+		//Random rand = new Random(); garbage
 		
 		
 		//Dream Things
 		
-		String[] DreamStates = {"Sleep Onset", "Sleep Paralysis", "Rapid Eye Movement", "Deep Sleep"};
-		String[] Entities = {"Mom", "Dad", "Brother", "Sister", "Best Friend"};	
-		String DreamStage = DreamStates[0];
-		String dreamStageNarrator = ("You are now in the " + DreamStage + " stage");
+		String[] dreamStates = {"Sleep Onset", "Sleep Paralysis", "Rapid Eye Movement", "Deep Sleep"};
+		String[] entities = {"Mom", "Dad", "Brother", "Sister", "Best Friend"};	
+		String dreamStage = dreamStates[0];
+		String dreamStageNarrator = ("You are now in the " + dreamStage + " stage");
 		
 		//Player Things
 		
@@ -110,7 +111,7 @@ public class HypnogogiaMain {
 					
 				}
 				
-				break;
+				break; // running = false is way better. break can be do funky stuff sometimes
 				
 				
 			}
