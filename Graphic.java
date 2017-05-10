@@ -17,14 +17,14 @@ import javax.swing.JLabel;
 
 public class Graphic {
 	
-	private JFrame frame;
+	private JFrame frame, menuFrame, normalFrame, sleepParFrame, nightMareFrame;
 	private JPanel panel, labels, go;
-	private JLabel label, choosen;
+	private JLabel label, choosen, nightmare, sleeppar, normal;
 	private JTextField jt;
 	private String input;
 	private JButton jb1, jb2,jb3, clickGo;
 	private int choice = 0;
-	private ImageIcon image1,image2,image3;
+	private ImageIcon image1,image2,image3, mare,scary, norm ;
 
 	public Graphic()
 	{
@@ -56,6 +56,14 @@ public class Graphic {
 		
 		go = new JPanel();
 		clickGo = new JButton("Continue");
+		clickGo.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				end();
+				paintMenuScreen();
+			}
+		});
 		go.add(clickGo);
 		
 		choosen = new JLabel("");
@@ -184,6 +192,121 @@ public class Graphic {
 	 		
 	  	    return b;
 	 	}
+	 public void paintMenuScreen()
+	 {
+		 	menuFrame = new JFrame("GAME");
+			menuFrame.setVisible(true);
+			menuFrame.setSize(1024, 768);
+			menuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			menuFrame.setResizable(false);
+			menuFrame.setLocationRelativeTo(null);
+			
+			
+			JPanel masterPanel = new JPanel();
+			masterPanel.setLayout(new BorderLayout());
+			masterPanel.setBackground(Color.white);
+			
+			JPanel buttonHolder = new JPanel();
+			
+			JButton sleepPar = new JButton();
+			sleepPar.setText("Sleep Paralysis");
+			sleepPar.addActionListener(new ActionListener()
+			{
+				public void actionPerformed(ActionEvent e)
+				{
+					paintSleepPar();
+				}
+			});
+			
+			JButton nightMare= new JButton();
+			nightMare.setText("nightMare");
+			nightMare.addActionListener(new ActionListener()
+			{
+				public void actionPerformed(ActionEvent e)
+				{
+					paintNightMare();
+				}
+			});
+			
+			JButton normal = new JButton();
+			normal.setText("normal");
+			normal.addActionListener(new ActionListener()
+			{
+				public void actionPerformed(ActionEvent e)
+				{
+					paintNormal();
+				}
+			});
+			
+			buttonHolder.add(sleepPar);
+			buttonHolder.add(nightMare);
+			buttonHolder.add(normal);
+		
+			
+			masterPanel.add(buttonHolder, BorderLayout.CENTER);
+			menuFrame.add(masterPanel);
+	 }
+	 public void paintNormal()
+	 {
+		menuFrame.setVisible(false);
+		 
+		normalFrame = new JFrame("GAME");
+		normalFrame.setVisible(true);
+		normalFrame.setSize(1024, 768);
+		normalFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		normalFrame.setResizable(false);
+		normalFrame.setLocationRelativeTo(null);
+		
+		
+
+		norm = new ImageIcon(getClass().getResource("norm.jpg"));
+		normal = new JLabel();
+		normal.setIcon(norm);
+		
+		normalFrame.add(normal);
+	 }
+	 
+	 public void paintNightMare()
+	 {
+		menuFrame.setVisible(false);
+		
+		nightMareFrame = new JFrame("GAME");
+	   	nightMareFrame.setVisible(true);
+		nightMareFrame.setSize(1024, 768);
+		nightMareFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		nightMareFrame.setResizable(false);
+		nightMareFrame.setLocationRelativeTo(null);
+		
+		
+		mare= new ImageIcon(getClass().getResource("mar.jpg"));
+		
+		nightmare = new JLabel();
+		nightmare.setIcon(mare);
+		
+		nightMareFrame.add(nightmare);
+		 
+	 }
+	  
+	 public void paintSleepPar()
+	 {
+		 menuFrame.setVisible(false);
+		 
+		sleepParFrame = new JFrame("GAME");
+		sleepParFrame.setVisible(true);
+		sleepParFrame.setSize(1024, 768);
+		sleepParFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		sleepParFrame.setResizable(false);
+		sleepParFrame.setLocationRelativeTo(null);
+		
+
+		scary= new ImageIcon(getClass().getResource("scary.jpg"));
+		
+		sleeppar = new JLabel();
+		sleeppar.setIcon(scary);
+		
+		sleepParFrame.add(sleeppar);
+	 }
+	  
 	  
 }
 
@@ -250,3 +373,4 @@ public class Graphic {
 			*
 			*
 			*/
+
