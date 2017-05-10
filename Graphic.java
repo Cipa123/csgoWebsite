@@ -18,15 +18,14 @@ import javax.swing.JLabel;
 public class Graphic {
 	
 	private JFrame frame;
-	private JPanel panel, labels;
+	private JPanel panel, labels, go;
 	private JLabel label;
 	private JTextField jt;
 	private String input;
-	private JButton jb1, jb2,jb3;
+	private JButton jb1, jb2,jb3, clickGo;
 	private int choice = 0;
-	private ImageIcon image1;
-	private ImageIcon image2;
-	private ImageIcon image3;
+	private ImageIcon image1,image2,image3;
+
 	public Graphic()
 	{
 		input = "";
@@ -51,10 +50,13 @@ public class Graphic {
 		panel = new JPanel();
 		panel.setLayout(new BorderLayout());
 		labels = new JPanel();
-		labels.setBackground(Color.white);
+		labels.setBackground(Color.DARK_GRAY);
 		panel.setBackground(Color.white);
-	
 		
+		
+		go = new JPanel();
+		clickGo = new JButton("Continue");
+		go.add(clickGo);
 		
 		
 		
@@ -84,7 +86,7 @@ public class Graphic {
 		jb1.setIcon(image1);
 		panel.add(label ,BorderLayout.NORTH);
 		panel.add(labels, BorderLayout.CENTER);
-		
+		panel.add(go, BorderLayout.SOUTH);
 		frame.add(panel);
 		frame.repaint();
 		
@@ -220,4 +222,3 @@ public class Graphic {
 			*
 			*
 			*/
-
