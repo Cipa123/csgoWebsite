@@ -29,17 +29,17 @@ public class Graphic {
 	public Graphic()
 	{
 		input = "";
-		gui();
+		paintTest1();
 	}
 	
-	public void gui()
+	public void paintTest1()
 	{
 		
-		frame = new JFrame("GAME");
+		frame = new JFrame("Test1");
 		frame.setVisible(true);
 		frame.setSize(1024, 768);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setResizable(false);
+		frame.setResizable(true);
 		frame.setLocationRelativeTo(null);
 	
 				//ImageIcon oneIcon = new ImageIcon("\\conversion\\source\\Button 1.png");
@@ -50,8 +50,364 @@ public class Graphic {
 		panel = new JPanel();
 		panel.setLayout(new BorderLayout());
 		labels = new JPanel();
-		labels.setBackground(Color.DARK_GRAY);
-		panel.setBackground(Color.white);
+		labels.setBackground(Color.black);
+		panel.setBackground(Color.black);
+		
+		
+		go = new JPanel();
+		clickGo = new JButton("Continue");
+		clickGo.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				end();
+				paintTest2();
+			}
+		});
+		go.add(clickGo);
+		
+		choosen = new JLabel("");
+		
+		label = new JLabel(menuStartScreen());
+		label.setForeground(Color.white);
+		Font font = new Font("Helvetica", Font.PLAIN, 18);
+		label.setFont(font);
+	
+		image1 = new ImageIcon(getClass().getResource("Button 1.png"));
+		jb1 = new JButton(image1);
+		jb1.setContentAreaFilled(false);
+			//jb1.setBorderPainted(false);
+		jb1.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				clickGo.setText("You have choosen one");
+			}
+		});
+		
+		image2 = new ImageIcon(getClass().getResource("Button 2.png"));
+		jb2 = new JButton(image2);
+		jb2.setContentAreaFilled(false);
+		jb2.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				clickGo.setText("You have choosen two");
+			}
+		});
+		
+		image3 = new ImageIcon(getClass().getResource("Button 3.png"));
+		jb3 = new JButton(image3);
+		jb3.setContentAreaFilled(false);	
+		jb3.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				clickGo.setText("You have choosen three");
+			}
+		});
+		
+		
+	
+		labels.add(choosen);
+		labels.add(jb1);
+		labels.add(jb2);
+		labels.add(jb3);
+		//labels.add(choosen);
+	
+		panel.add(label ,BorderLayout.NORTH);
+		panel.add(labels, BorderLayout.CENTER);
+		panel.add(go, BorderLayout.SOUTH);
+	
+		frame.add(panel);
+		frame.repaint();
+		
+					//panel.add(jt);
+					//	label = new JLabel("<html>TEST <br>  TEST</html>");
+					//panel.add(jb);
+					/*	jb.addActionListener(new ActionListener()
+					{
+						public void actionPerformed(ActionEvent e)
+						{
+							choice = 1;
+							panel.remove(jb);
+							SwingUtilities.updateComponentTreeUI(frame);
+						}
+					});
+					/*jt.addActionListener(new ActionListener()
+					{
+						public void actionPerformed(ActionEvent e)
+						{
+							String input = jt.getText();
+							label.setText(input);
+						}
+					});
+					*/
+
+					//	panel.add(jb);
+					//panel.add(label);
+		
+		
+	}
+
+	public void paintTest2()
+	{
+		
+		frame = new JFrame("Test2");
+		frame.setVisible(true);
+		frame.setSize(1024, 768);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(true);
+		frame.setLocationRelativeTo(null);
+	
+				//ImageIcon oneIcon = new ImageIcon("\\conversion\\source\\Button 1.png");
+				//	 jb = new JButton("1", oneIcon);
+				//jb.setBorderPainted(false);
+				//	jb.setContentAreaFilled(false);
+		
+		panel = new JPanel();
+		panel.setLayout(new BorderLayout());
+		labels = new JPanel();
+		labels.setBackground(Color.black);
+		panel.setBackground(Color.black);
+		
+		
+		go = new JPanel();
+		clickGo = new JButton("Continue");
+		clickGo.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				end();
+				paintTest3();
+			}
+		});
+		go.add(clickGo);
+		
+		choosen = new JLabel("");
+		//WHERE IT PASSES IN TEXT
+		label = new JLabel(menuStartScreen2());
+		label.setForeground(Color.white);
+		Font font = new Font("Helvetica", Font.PLAIN, 18);
+		label.setFont(font);
+	
+		image1 = new ImageIcon(getClass().getResource("Button 1.png"));
+		jb1 = new JButton(image1);
+		jb1.setContentAreaFilled(false);
+			//jb1.setBorderPainted(false);
+		jb1.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				clickGo.setText("You have choosen one");
+			}
+		});
+		
+		image2 = new ImageIcon(getClass().getResource("Button 2.png"));
+		jb2 = new JButton(image2);
+		jb2.setContentAreaFilled(false);
+		jb2.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				clickGo.setText("You have choosen two");
+			}
+		});
+		
+		image3 = new ImageIcon(getClass().getResource("Button 3.png"));
+		jb3 = new JButton(image3);
+		jb3.setContentAreaFilled(false);	
+		jb3.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				clickGo.setText("You have choosen three");
+			}
+		});
+		
+		
+	
+		labels.add(choosen);
+		labels.add(jb1);
+		labels.add(jb2);
+		labels.add(jb3);
+		//labels.add(choosen);
+	
+		panel.add(label ,BorderLayout.NORTH);
+		panel.add(labels, BorderLayout.CENTER);
+		panel.add(go, BorderLayout.SOUTH);
+	
+		frame.add(panel);
+		frame.repaint();
+		
+					//panel.add(jt);
+					//	label = new JLabel("<html>TEST <br>  TEST</html>");
+					//panel.add(jb);
+					/*	jb.addActionListener(new ActionListener()
+					{
+						public void actionPerformed(ActionEvent e)
+						{
+							choice = 1;
+							panel.remove(jb);
+							SwingUtilities.updateComponentTreeUI(frame);
+						}
+					});
+					/*jt.addActionListener(new ActionListener()
+					{
+						public void actionPerformed(ActionEvent e)
+						{
+							String input = jt.getText();
+							label.setText(input);
+						}
+					});
+					*/
+
+					//	panel.add(jb);
+					//panel.add(label);
+		
+		
+	}
+
+	
+	public void paintTest3()
+	{
+		
+		frame = new JFrame("Test3");
+		frame.setVisible(true);
+		frame.setSize(1024, 768);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(true);
+		frame.setLocationRelativeTo(null);
+	
+				//ImageIcon oneIcon = new ImageIcon("\\conversion\\source\\Button 1.png");
+				//	 jb = new JButton("1", oneIcon);
+				//jb.setBorderPainted(false);
+				//	jb.setContentAreaFilled(false);
+		
+		panel = new JPanel();
+		panel.setLayout(new BorderLayout());
+		labels = new JPanel();
+		labels.setBackground(Color.black);
+		panel.setBackground(Color.black);
+		
+		
+		go = new JPanel();
+		clickGo = new JButton("Continue");
+		clickGo.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				end();
+				paintTest4();
+			}
+		});
+		go.add(clickGo);
+		
+		choosen = new JLabel("");
+		//WHERE IT PASSES IN TEXT
+		label = new JLabel(menuStartScreen3());
+		label.setForeground(Color.white);
+		Font font = new Font("Helvetica", Font.PLAIN, 18);
+		label.setFont(font);
+	
+		image1 = new ImageIcon(getClass().getResource("Button 1.png"));
+		jb1 = new JButton(image1);
+		jb1.setContentAreaFilled(false);
+			//jb1.setBorderPainted(false);
+		jb1.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				clickGo.setText("You have choosen one");
+			}
+		});
+		
+		image2 = new ImageIcon(getClass().getResource("Button 2.png"));
+		jb2 = new JButton(image2);
+		jb2.setContentAreaFilled(false);
+		jb2.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				clickGo.setText("You have choosen two");
+			}
+		});
+		
+		image3 = new ImageIcon(getClass().getResource("Button 3.png"));
+		jb3 = new JButton(image3);
+		jb3.setContentAreaFilled(false);	
+		jb3.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				clickGo.setText("You have choosen three");
+			}
+		});
+		
+		
+	
+		labels.add(choosen);
+		labels.add(jb1);
+		labels.add(jb2);
+		labels.add(jb3);
+		//labels.add(choosen);
+	
+		panel.add(label ,BorderLayout.NORTH);
+		panel.add(labels, BorderLayout.CENTER);
+		panel.add(go, BorderLayout.SOUTH);
+	
+		frame.add(panel);
+		frame.repaint();
+		
+					//panel.add(jt);
+					//	label = new JLabel("<html>TEST <br>  TEST</html>");
+					//panel.add(jb);
+					/*	jb.addActionListener(new ActionListener()
+					{
+						public void actionPerformed(ActionEvent e)
+						{
+							choice = 1;
+							panel.remove(jb);
+							SwingUtilities.updateComponentTreeUI(frame);
+						}
+					});
+					/*jt.addActionListener(new ActionListener()
+					{
+						public void actionPerformed(ActionEvent e)
+						{
+							String input = jt.getText();
+							label.setText(input);
+						}
+					});
+					*/
+
+					//	panel.add(jb);
+					//panel.add(label);
+		
+		
+	}
+
+	
+	public void paintTest4()
+	{
+		
+		frame = new JFrame("Test4");
+		frame.setVisible(true);
+		frame.setSize(1024, 768);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(true);
+		frame.setLocationRelativeTo(null);
+	
+				//ImageIcon oneIcon = new ImageIcon("\\conversion\\source\\Button 1.png");
+				//	 jb = new JButton("1", oneIcon);
+				//jb.setBorderPainted(false);
+				//	jb.setContentAreaFilled(false);
+		
+		panel = new JPanel();
+		panel.setLayout(new BorderLayout());
+		labels = new JPanel();
+		labels.setBackground(Color.black);
+		panel.setBackground(Color.black);
 		
 		
 		go = new JPanel();
@@ -67,8 +423,9 @@ public class Graphic {
 		go.add(clickGo);
 		
 		choosen = new JLabel("");
-		
-		label = new JLabel(menuStartScreen());
+		//WHERE IT PASSES IN TEXT
+		label = new JLabel(menuStartScreen4());
+		label.setForeground(Color.white);
 		Font font = new Font("Helvetica", Font.PLAIN, 18);
 		label.setFont(font);
 	
@@ -151,6 +508,10 @@ public class Graphic {
 
 	
 
+	
+
+	
+
 	public void end()
 	{
 		frame.setVisible(false);
@@ -192,19 +553,96 @@ public class Graphic {
 	 		
 	  	    return b;
 	 	}
+	 public String menuStartScreen2()
+	 
+	 {
+		 String b = "";
+	 		b +="<html><h1>------------------------------------------------------<br>" +
+	 				"Onto next question...<br>" +
+	 				"------------------------------------------------------<br>" +
+	 				"You are in the classroom and the kid next to you spills drink all over you. You don't know if he did it on purpose or on accident.<br>"+
+	 				"He says he is terribly sorry. What do you do?<br>"+
+	 				"------------------------------------------------------<br>"+
+	 				"1 = Forgive him and continue class in soaking clothes<br>"+
+	 				"2 = Leave to go to bathroom to change clothes<br>"+
+	 				"3 = Punch the kid in the face<br>"+
+	 				"------------------------------------------------------<br></h1></html>";
+	 		
+	  	    return b;
+		 
+	 }
+
+	 public String menuStartScreen3()
+	 
+	 {
+		 String b = "";
+	 		b +="<html><h1>------------------------------------------------------<br>" +
+	 				"Okay next question...<br>" +
+	 				"------------------------------------------------------<br>" +
+	 				"You are walking down the street heading to school and you encounter a homeless man sitting against the wallside.<br>"+
+	 				"He sees you walk by and asks you for spare change or any food. What do you do?<br>"+
+	 				"------------------------------------------------------<br>"+
+	 				"1 = Locate your wallet and give him cash<br>"+
+	 				"2 = Pull out your lunch box and give him some of your lunch clothes<br>"+
+	 				"3 = Ignore him<br>"+
+	 				"------------------------------------------------------<br></h1></html>";
+	 		
+	  	    return b;
+		 
+	 }
+
+	 public String menuStartScreen4()
+	 
+	 {
+		 String b = "";
+	 		b +="<html><h1>------------------------------------------------------<br>" +
+	 				"My last question...<br>" +
+	 				"------------------------------------------------------<br>" +
+	 				"You are in a Labratory and there is a scientest that asks you questions that represent different scenerios.<br>"+
+	 				"He wants you to answer them. He injects meletonin hormone into your body. You then feel very drousy.<br>"+
+	 				"------------------------------------------------------<br>"+
+	 				"1 = Comply<br>"+
+	 				"2 = Attempt to Resist<br>"+
+	 				"3 = Comply<br>"+
+	 				"------------------------------------------------------<br></h1></html>";
+	 		
+	  	    return b;
+		 
+	 }
+
+	 
+ 	 
+
+	 
+ 	 
+
+	 
+	 
+	 
+	 
+ 	 
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 	 public void paintMenuScreen()
+
 	 {
 		 	menuFrame = new JFrame("GAME");
 			menuFrame.setVisible(true);
 			menuFrame.setSize(1024, 768);
 			menuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			menuFrame.setResizable(false);
+			menuFrame.setResizable(true);
 			menuFrame.setLocationRelativeTo(null);
 			
 			
 			JPanel masterPanel = new JPanel();
 			masterPanel.setLayout(new BorderLayout());
-			masterPanel.setBackground(Color.white);
+			masterPanel.setBackground(Color.black);
 			
 			JPanel buttonHolder = new JPanel();
 			
@@ -246,6 +684,7 @@ public class Graphic {
 			masterPanel.add(buttonHolder, BorderLayout.CENTER);
 			menuFrame.add(masterPanel);
 	 }
+	 
 	 public void paintNormal()
 	 {
 		menuFrame.setVisible(false);
@@ -254,16 +693,22 @@ public class Graphic {
 		normalFrame.setVisible(true);
 		normalFrame.setSize(1024, 768);
 		normalFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		normalFrame.setResizable(false);
+		normalFrame.setResizable(true);
 		normalFrame.setLocationRelativeTo(null);
 		
 		
-
+//960 x 640
+		
 		norm = new ImageIcon(getClass().getResource("norm.jpg"));
 		normal = new JLabel();
 		normal.setIcon(norm);
 		
-		normalFrame.add(normal);
+		normalFrame.add(normal, BorderLayout.CENTER);
+		
+		
+		
+		
+		
 	 }
 	 
 	 public void paintNightMare()
@@ -274,11 +719,11 @@ public class Graphic {
 	   	nightMareFrame.setVisible(true);
 		nightMareFrame.setSize(1024, 768);
 		nightMareFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		nightMareFrame.setResizable(false);
+		nightMareFrame.setResizable(true);
 		nightMareFrame.setLocationRelativeTo(null);
 		
 		
-		mare= new ImageIcon(getClass().getResource("mar.jpg"));
+		mare= new ImageIcon(getClass().getResource("mare.jpg"));
 		
 		nightmare = new JLabel();
 		nightmare.setIcon(mare);
@@ -295,11 +740,11 @@ public class Graphic {
 		sleepParFrame.setVisible(true);
 		sleepParFrame.setSize(1024, 768);
 		sleepParFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		sleepParFrame.setResizable(false);
+		sleepParFrame.setResizable(true);
 		sleepParFrame.setLocationRelativeTo(null);
 		
 
-		scary= new ImageIcon(getClass().getResource("scary.jpg"));
+		scary= new ImageIcon(getClass().getResource("par.jpg"));
 		
 		sleeppar = new JLabel();
 		sleeppar.setIcon(scary);
