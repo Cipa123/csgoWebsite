@@ -19,7 +19,7 @@ public class Graphic {
 	
 	private JFrame frame;
 	private JPanel panel, labels, go;
-	private JLabel label;
+	private JLabel label, choosen;
 	private JTextField jt;
 	private String input;
 	private JButton jb1, jb2,jb3, clickGo;
@@ -58,9 +58,9 @@ public class Graphic {
 		clickGo = new JButton("Continue");
 		go.add(clickGo);
 		
+		choosen = new JLabel("");
 		
-		
-		label = new JLabel(menuStartScreen(), JLabel.CENTER);
+		label = new JLabel(menuStartScreen());
 		Font font = new Font("Helvetica", Font.PLAIN, 18);
 		label.setFont(font);
 	
@@ -68,25 +68,48 @@ public class Graphic {
 		jb1 = new JButton(image1);
 		jb1.setContentAreaFilled(false);
 			//jb1.setBorderPainted(false);
+		jb1.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				clickGo.setText("You have choosen one");
+			}
+		});
 		
 		image2 = new ImageIcon(getClass().getResource("Button 2.png"));
 		jb2 = new JButton(image2);
 		jb2.setContentAreaFilled(false);
+		jb2.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				clickGo.setText("You have choosen two");
+			}
+		});
 		
 		image3 = new ImageIcon(getClass().getResource("Button 3.png"));
 		jb3 = new JButton(image3);
-		jb3.setContentAreaFilled(false);
+		jb3.setContentAreaFilled(false);	
+		jb3.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				clickGo.setText("You have choosen three");
+			}
+		});
 		
 		
-		ListenForButton lForButton = new ListenForButton();
-		
+	
+		labels.add(choosen);
 		labels.add(jb1);
 		labels.add(jb2);
 		labels.add(jb3);
-		jb1.setIcon(image1);
+		//labels.add(choosen);
+	
 		panel.add(label ,BorderLayout.NORTH);
 		panel.add(labels, BorderLayout.CENTER);
 		panel.add(go, BorderLayout.SOUTH);
+	
 		frame.add(panel);
 		frame.repaint();
 		
@@ -114,13 +137,16 @@ public class Graphic {
 
 					//	panel.add(jb);
 					//panel.add(label);
-
+		
 		
 	}
 
 	
 
-	
+	public void end()
+	{
+		frame.setVisible(false);
+	}
 	public void setInput(String b)
 	{
 		input = b;
@@ -159,20 +185,6 @@ public class Graphic {
 	  	    return b;
 	 	}
 	  
-	  private class ListenForButton implements ActionListener
-	  {
-
-		@Override
-		public void actionPerformed(ActionEvent e)
-		{
-			if(e.getSource() == jb1)
-			{
-				
-			}
-			
-		}
-		  
-	  }
 }
 
 			/* USELESS OLD CRAP
@@ -218,7 +230,23 @@ public class Graphic {
 					SwingUtilities.updateComponentTreeUI(frame);
 				
 				}
-				
+					/*  private class ListenForButton implements ActionListener
+	  			{
+
+	
+					public void actionPerformed(ActionEvent e)
+					{
+						if(e.getSource() == jb1)
+						{
+							
+							label.setText("You have choosen number one");
+							Graphic.end();
+						
+						}
+						
+					}
+					  
+				  }
 			*
 			*
 			*/
